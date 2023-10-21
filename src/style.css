@@ -1,0 +1,104 @@
+:root {
+  --sizeOfCell: 75px;
+}
+
+.black {
+  background-color: black;
+}
+
+.white {
+  background-color: white;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "content content"
+    "content content"
+    "footer footer";
+  grid-template-rows: 30px 1fr 1fr 30px;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.content {
+  display: grid;
+  grid-area: content;
+  grid-template-areas: "menu gameContainer";
+  grid-template-columns: 1fr 3fr;
+  height: 100%;
+}
+
+.menu {
+  grid-area: menu;
+  background-color: lightgreen;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonMenuContainer {
+  background-color: white;
+  width: 200px;
+  height: 200px;
+  margin-top: 100px;
+}
+
+.gameContainer {
+  grid-area: gameContainer;
+  background-color: lightyellow;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.gameboard {
+  width: var(--sizeOfCell) * 8;
+  height: var(--sizeOfCell) * 8;
+  background-color: white;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(8, var(--sizeOfCell));
+  grid-template-rows: repeat(8, var(--sizeOfCell));
+}
+
+.cell {
+  width: var(--sizeOfCell);
+  height: var(--sizeOfCell);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: lightpink;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
