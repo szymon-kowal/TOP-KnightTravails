@@ -62,10 +62,12 @@ body {
 }
 
 .buttonMenuContainer {
-  background-color: white;
-  width: 200px;
-  height: 200px;
+  border: 1px solid black;
   margin-top: 100px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .gameContainer {
