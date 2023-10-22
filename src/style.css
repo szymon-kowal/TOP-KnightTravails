@@ -4,6 +4,7 @@
 
 .black {
   background-color: black;
+  color: white;
 }
 
 .white {
@@ -92,6 +93,14 @@ body {
   justify-content: center;
   align-items: center;
   border: 1px solid black;
+}
+
+.knight {
+  background-color: green;
+}
+
+.end {
+  background-color: red;
 }
 
 .footer {

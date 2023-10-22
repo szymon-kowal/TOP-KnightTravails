@@ -17,7 +17,6 @@ function getKnightMoves(x, y) {
             validMoves.push([newX, newY]);
         }
     }
-
     return validMoves;
 }
 
